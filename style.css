@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&family=Varela+Round&display=swap');
+:root{
+    --Ubantu: 'Ubuntu', sans-serif;
+    --varela: 'Varela Round', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: wheat;
+}
+.navBar{
+    background-color: black;
+    /* text-align: center; */
+    padding: 25px 15px;
+    font-family: var(--Ubantu);
+    font-size: 3vw;
+    color: rgb(100, 74, 192);
+}
+.container{
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    margin: 50px 0;
+    /* padding: 30px 0; */
+}
+.TicTacToe_Box{
+    position: relative;
+    /* background-color: red; */
+    font-family: var(--varela);
+    font-weight: bolder;
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+}
+.box{
+    font-size: 5vw;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(240, 208, 156);
+    cursor: pointer;
+}
+
+.info{
+    font-family: var(--Ubantu);
+    font-size: xx-large;
+    font-weight:bolder;
+}
+.imageBox img{
+    width: 0;
+    transition: width 400ms ease-in-out;
+}
+
+#reset{
+    width: 100px;
+    background: transparent;
+    border: 3px solid black;
+    border-radius: 5px;
+    font-family: var(--varela);
+    font-weight: bold;
+    font-size: 14px;
+}
+#reset:hover{
+    cursor: pointer;
+}
+#reset:active{
+    background-color: white;
+}
+.line{
+    background-color: black;
+    width: 0;
+    height: 5px;
+    border-radius: 5px;
+    position:absolute;
+    transition: width 600ms ease-in-out;
+}
+.bt_0{border-top: 0;}
+.bb_0{border-bottom: 0;}
+.br_0{border-right: 0;}
+.bl_0{border-left: 0;}
+
+@media screen and (max-width:600px){
+    .container{
+        display: block;
+    }
+    .TicTacToe_Box{
+        margin: 0 35vw;
+        /* grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw); */
+
+    }
+    .box{
+        font-size: 30px;
+    }
+    .gameInfo{
+        /* width: 90vw; */
+        /* display: block; */
+        margin-top: 80px;
+        text-align: center;
+    }
+    .imageBox{
+        display: block;
+        margin: 0 39vw;
+    }
+}
